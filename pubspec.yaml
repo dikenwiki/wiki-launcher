@@ -1,0 +1,21 @@
+name: wiki_launcher
+description: "A minimal, sorted Android/Linux launcher with favorites, notes, and alphabet navigation."
+publish_to: 'none'
+version: 0.3.1+31
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.3.5
+  flutter_svg: ^2.0.10+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
