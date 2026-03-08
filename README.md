@@ -1,4 +1,4 @@
-# 📱 Wiki Launcher
+# <img src="icon.png" width="40" height="40" align="center" alt="Wiki Launcher Icon"> Wiki Launcher
 
 A minimal, sorted Android launcher built with Flutter. Clean, fast, and privacy-focused.
 
