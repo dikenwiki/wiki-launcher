@@ -67,6 +67,10 @@ class AppLocalizations {
     'showIcons': 'İkonları Göster',
     'hiddenApps': 'Gizli Uygulamalar',
     'version': 'Sürüm',
+    'about': 'Hakkında',
+    'sourceCode': 'Kaynak Kod',
+    'license': 'Lisans',
+    'openSource': 'Açık Kaynak',
   };
 
   static const Map<String, String> _en = {
@@ -111,5 +115,9 @@ class AppLocalizations {
     'showIcons': 'Show Icons',
     'hiddenApps': 'Hidden Apps',
     'version': 'Version',
+    'about': 'About',
+    'sourceCode': 'Source Code',
+    'license': 'License',
+    'openSource': 'Open Source',
   };
 }

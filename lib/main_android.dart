@@ -127,6 +127,10 @@ class _LauncherHomeState extends State<LauncherHome>
   final Map<String, Uint8List> _loadedIcons = {};
   List<String> _availableLetters = [];
 
+  static const String _appName = 'Wiki Launcher';
+  static const String _appVersion = '0.3.1';
+  static const String _repoUrl = 'https://github.com/dikenwiki/wiki-launcher';
+
   static const List<String> _alphabet = [
     '#', '★', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
     'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
@@ -528,10 +532,22 @@ class _LauncherHomeState extends State<LauncherHome>
                 },
               ),
 
+              // About
+              ListTile(
+                leading: const Icon(Icons.info_outline,
+                    color: Colors.white70),
+                title: Text(t('about'),
+                    style: const TextStyle(color: Colors.white)),
+                onTap: () {
+                  Navigator.pop(context);
+                  _showAboutDialog();
+                },
+              ),
+
               const SizedBox(height: 16),
               Center(
                 child: Text(
-                  '${t('version')}: 1.0.0',
+                  '${t('version')}: $_appVersion',
                   style: TextStyle(
                     color: Colors.white.withValues(alpha: 0.3),
                     fontSize: 12,
@@ -542,6 +558,81 @@ class _LauncherHomeState extends State<LauncherHome>
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  // ─── About Dialog ───
+
+  void _showAboutDialog() {
+    final t = AppLocalizations.get;
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        backgroundColor: const Color(0xFF1E1E1E),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Text(
+          t('about'),
+          style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              _appName,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              '${t('version')}: $_appVersion',
+              style: TextStyle(color: Colors.white.withValues(alpha: 0.6), fontSize: 13),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              '${t('license')}: ${t('openSource')}',
+              style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontSize: 13),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              '${t('sourceCode')}:',
+              style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontSize: 13),
+            ),
+            const SizedBox(height: 4),
+            GestureDetector(
+              onTap: () {
+                Clipboard.setData(const ClipboardData(text: _repoUrl));
+                Navigator.pop(context);
+                ScaffoldMessenger.of(this.context).showSnackBar(
+                  SnackBar(
+                    content: Text(t('sourceCode')),
+                    backgroundColor: const Color(0xFF1E1E1E),
+                    duration: const Duration(seconds: 2),
+                  ),
+                );
+              },
+              child: Text(
+                _repoUrl.replaceFirst('https://', ''),
+                style: const TextStyle(
+                  color: Colors.blue,
+                  fontSize: 13,
+                  decoration: TextDecoration.underline,
+                  decorationColor: Colors.blue,
+                ),
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(t('ok'), style: const TextStyle(color: Colors.white)),
+          ),
+        ],
       ),
     );
   }
