@@ -1,4 +1,4 @@
-# <img src="icon.png" width="90" height="90" alt="Wiki Launcher Icon"> <h3>Wiki Launcher</h3>
+# 
 
 A minimal, sorted Android launcher built with Flutter. Clean, fast, and privacy-focused.
 
