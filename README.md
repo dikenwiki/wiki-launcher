@@ -1,4 +1,4 @@
-# <img src="icon.png" width="90" height="90" align="center" alt="Wiki Launcher Icon"> <h3>Wiki Launcher</h3>
+# <img src="icon.png" width="90" height="90" alt="Wiki Launcher Icon"> <h3>Wiki Launcher</h3>
 
 A minimal, sorted Android launcher built with Flutter. Clean, fast, and privacy-focused.
 
@@ -27,9 +27,9 @@ Wiki Launcher provides a simple and distraction-free home screen experience. App
 
 ## Screenshots
 
-<p align="center">
-  <img src="ss/ss1.jpeg" alt="Home Screen" width="267"/>
-  <img src="ss/ss2.jpeg" alt="Search and Navigation" width="260"/>
+<p>
+  <img src="ss/ss1.jpeg" alt="Home Screen" width="167"/>
+  <img src="ss/ss2.jpeg" alt="Search and Navigation" width="160"/>
 </p>
 
 ## How It Works
