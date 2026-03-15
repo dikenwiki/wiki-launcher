@@ -29,13 +29,11 @@ Wiki Launcher provides a simple and distraction-free home screen experience. App
 
 ### Home Screen
 
-![](ss/ss1/1.png)
-![](ss/ss1/2.png)
+![](ss/ss1.jpeg)
 
 ### Search and Navigation
 
-![](ss/ss2/1.png)
-![](ss/ss2/2.png)
+![](ss/ss2.jpeg)
 
 ## How It Works
 
