@@ -1,44 +1,60 @@
-# <img src="icon.png" width="90" height="90" align="center" alt="Wiki Launcher Icon">  <h3> Wiki Launcher </h3>
+# <img src="icon.png" width="90" height="90" align="center" alt="Wiki Launcher Icon"> <h3>Wiki Launcher</h3>
 
 A minimal, sorted Android launcher built with Flutter. Clean, fast, and privacy-focused.
 
-> **OLED-friendly** pure black design · **No ads** · **No tracking** · **Open source**
+> Pure black OLED design · No ads · No tracking · Open source
 
 ---
 
-## ✨ Features
+## Overview
+
+Wiki Launcher provides a simple and distraction-free home screen experience. Apps are organized alphabetically, search is fast, and favorites stay easily accessible.
+
+## Features
 
 | Feature | Description |
-|---------|-------------|
-| 🔤 **Alphabet Navigation** | Zigzag DNA-style alphabet scroller for fast app access |
-| ⭐ **Favorites** | Pin and reorder your most used apps |
-| 🔍 **Search** | Quick search across all installed apps |
-| 📝 **Notes** | Add personal notes with bold text support on the home screen |
-| 👁️ **Hide Apps** | Hide apps you don't want to see |
-| ✏️ **Rename Apps** | Give apps custom display names |
-| ⚙️ **Settings via `/set`** | Type `/set` in the search bar to access settings |
-| 🌍 **Multi-language** | Turkish (Türkçe) and English support |
-| 🖤 **OLED Black** | Pure black background saves battery on OLED screens |
-| 📱 **Wide Screen** | 2-column grid on tablets and foldables |
+|---|---|
+| Alphabet Navigation | Fast app access through alphabet-based navigation |
+| Favorites | Pin and reorder your most used apps |
+| Search | Quickly search across installed apps |
+| Notes | Add personal notes to the home screen with bold text support |
+| Hide Apps | Hide apps you do not want to see |
+| Rename Apps | Set custom display names for apps |
+| Settings via `/set` | Type `/set` in the search bar to open settings |
+| Multi-language | Supports Turkish and English |
+| OLED Black | Pure black background optimized for OLED screens |
+| Wide Screen | Two-column layout for tablets and foldables |
 
-## 📸 How It Works
+## Screenshots
 
-- **Home Screen** → Your favorite apps, reorderable by long press
-- **Pull Down** → Expand notification panel
-- **Back Button** → Opens search
-- **Alphabet Sidebar** → Tap a letter to filter apps
-- **Long Press `#`** → Show hidden apps
-- **Type `/set`** → Open settings panel
+### Home Screen
 
-## 🔧 Settings
+![](ss/ss1/1.png)
+![](ss/ss1/2.png)
 
-Access settings by typing `/set` in the search bar:
+### Search and Navigation
 
-- 🌍 **Language** — Switch between Türkçe and English
-- 🖼️ **Show Icons** — Toggle app icons on/off
-- 👁️ **Hidden Apps** — View and manage hidden apps
+![](ss/ss2/1.png)
+![](ss/ss2/2.png)
 
-## 🚀 Build
+## How It Works
+
+- Home Screen: Shows your favorite apps, which can be reordered with a long press
+- Pull Down: Opens the notification panel
+- Back Button: Opens search
+- Alphabet Sidebar: Tap a letter to filter apps
+- Long Press `#`: Shows hidden apps
+- Type `/set`: Opens the settings panel
+
+## Settings
+
+Access settings by typing `/set` in the search bar.
+
+- Language — Switch between Turkish and English
+- Show Icons — Toggle app icons on or off
+- Hidden Apps — View and manage hidden apps
+
+## Build
 
 ### Requirements
 
@@ -63,30 +79,32 @@ flutter build apk --debug
 flutter build apk --release
 ```
 
-The APK will be at `build/app/outputs/flutter-apk/app-release.apk`
+The APK will be available at:
 
-## 📁 Project Structure
+`build/app/outputs/flutter-apk/app-release.apk`
 
-```
+## Project Structure
+
+```text
 lib/
-├── main.dart              # Platform router (Android/Linux)
-├── main_android.dart      # Android launcher UI
-├── main_linux.dart        # Linux launcher UI
+├── main.dart                  # Platform router (Android/Linux)
+├── main_android.dart          # Android launcher UI
+├── main_linux.dart            # Linux launcher UI
 ├── android_app_service.dart   # Android platform channel service
 ├── linux_app_service.dart     # Linux app discovery service
-├── services.dart          # Shared storage services (favorites, settings)
-└── app_localizations.dart # i18n (Turkish/English)
+├── services.dart              # Shared storage services (favorites, settings)
+└── app_localizations.dart     # i18n (Turkish/English)
 ```
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! Feel free to:
+Contributions are welcome.
 
-- 🐛 Report bugs
-- 💡 Suggest new features
-- 🔧 Submit pull requests
-- 🌍 Add new language translations
+- Report bugs
+- Suggest features
+- Submit pull requests
+- Add new language translations
 
-## 📄 License
+## License
 
-This project is open source
+This project is open source.
