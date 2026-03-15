@@ -28,7 +28,7 @@ Wiki Launcher provides a simple and distraction-free home screen experience. App
 ## Screenshots
 
 <p>
-  <img src="ss/ss1.jpeg" alt="Home Screen" width="167"/>
+  <img src="ss/ss1.jpeg" alt="Home Screen" width="163"/>
   <img src="ss/ss2.jpeg" alt="Search and Navigation" width="160"/>
 </p>
 
